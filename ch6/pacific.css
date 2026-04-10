@@ -5,7 +5,6 @@ body { background-color: #EAEAEA;
 header { background-color: #002171; 
          color: #FFFFFF;
          font-family: Georgia, serif;
-         background-image: url(sunset.jpg);
 	    height: 120px; }
 header a { text-decoration: none; }
 header a:link { color: #FFFFFF; }
@@ -25,7 +24,6 @@ h2 { color: #1976D2;
      font-family: Georgia, serif; }
 h3 { font-family: Georgia, serif; }
 nav { font-weight: bold;
-      background-color: #BBDEFB;
       padding-top: .5em;
       padding-right: .5em;
       padding-bottom: .5em;
