@@ -32,6 +32,7 @@ nav { font-weight: bold;
       padding: 0;
       font-size: 1.2em;
       position: fixed; }
+nav a { text-decoration: none; }
 nav a:link { color: #5C7FA3; }
 nav a:visited { color: #344873; }
 nav a:hover { color: #A52A2A; }
