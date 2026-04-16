@@ -1,4 +1,13 @@
 * { box-sizing: border-box; }
+table { border-collapse: collapse;
+        margin: auto;
+        border: 1px solid #3399CC;
+        width: 90%; }
+td, th { padding: 5px;
+     border: 1px solid #3399CC; }
+td { text-align: center }
+.text { text-align: left; }
+tr:nth-of-type(even) { background-color: #DFEDF8; }
 body { background-color: #90C7E3; 
        color: #666666;
        font-family: Arial, Verdana, sans-serif;
