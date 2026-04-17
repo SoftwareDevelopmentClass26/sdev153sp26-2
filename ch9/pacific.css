@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+table { border-collapse: collapse;
+        margin: auto;
+        border: 1px solid #3399CC;
+        width: 90%; }
+td, th { padding: 5px;
+     border: 1px solid #3399CC; }
+td { text-align: center }
+.text { text-align: left; }
+tr:nth-of-type(even) { background-color: #DFEDF8; }
+body { background-color: #90C7E3; 
+       color: #666666;
+       font-family: Arial, Verdana, sans-serif;
+       margin: 0 }
+header { background-color: #002171; 
+         color: #FFFFFF;
+         font-family: Georgia, serif;
+	    padding: 1em; }
+header a { text-decoration: none; }
+header a:link { color: #FFFFFF; }
+header a:visited { color: #FFFFFF;}
+header a:hover { color: #90C7E3; }
+main { padding-left: 2em;
+       padding-right: 2em;
+       display: block;
+       padding-top: 0;
+       padding-bottom: 0; }
+h1 { text-align: center;
+     font-size: 1.5em; }
+h2 { color: #1976D2; 
+     font-family: Georgia, serif; }
+nav { text-align: center;
+      background-color: #FFFFFF; }
+nav a { text-decoration: none; }
+nav a:link { color: #5C7FA3; }
+nav a:visited { color: #344873; }
+nav a:hover { color: #A52A2A; }
+nav ul { text-decoration: none;
+         list-style-type: none;
+         flex-direction: column;
+         margin: 0;
+         padding-left: 0; }
+nav li { padding-bottom: 0.5em;
+         padding-top: 0.5em;
+         padding-left: 1em;
+         padding-right: 1em;
+         width: 100%; 
+         border-bottom: 1px solid; }
+.resort { color: #1976D2;
+          font-size: 1.2em; }
+dt { color: #002171;
+     font-weight: bold; }
+footer { font-size: .70em;
+         text-align: center;
+         font-style: italic;
+         padding: 1em;
+         background-color: #FFFFFF; }
+section { padding-left: 0.5em;
+          padding-right: 0.5em; }
+#wrapper { background-color: #FFFFFF; }
+#homehero { height: 300px;
+            background-image: url(coast.jpg);
+            background-size: 200% 100%; }
+#yurthero { height: 300px;
+            background-image: url(yurt.jpg);
+            background-size: 200% 100%; }
+#trailhero { height: 300px;
+            background-image: url(trail.jpg);
+            background-size: 200% 100%; }
+#mobile { display: inline; }
+#desktop { display: none; }
+/* Medium Display */
+@media (min-width: 600px)
+{ h1 { font-size: 2em;
+     letter-spacing: 0.25em; }
+nav li { width: 12em;
+	    border-bottom: none; }
+nav ul { display: flex;
+         flex-direction: row;
+         flex-flow: nowrap;
+         justify-content: space-around;
+         padding-right: 2em; }
+section { padding-left: 2em;
+          padding-right: 2em; }
+#flow { display: flex;
+        flex-direction: row; }
+#mobile { display: none; }
+#desktop {display: inline; }
+#homehero { background-size: 100% 100%;
+         /* background-image: url(coast.jpg) no-repeat; */ }
+#yurthero { background-size: 100% 100%;
+         /* background-image: url(yurt.jpg) no-repeat; */ }
+#trailhero { background-size: 100% 100%;
+          /* background-image: url(trail.jpg) no-repeat; */ } }
+/* Large Display */
+@media (min-width: 1024px) 
+{ body { background-image: linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%); }
+  nav ul {padding-right: 10%;
+          padding-left: 10%; }
+  #wrapper { margin: auto;
+             width: 80%; } }
