@@ -69,9 +69,18 @@ section { padding-left: 0.5em;
             background-size: 200% 100%; }
 #mobile { display: inline; }
 #desktop { display: none; }
+form { display: flex;
+       flex-direction: column;
+       padding-left: 1em;
+       width: 80%; }
+input, textarea { margin-bottom: 0.5em; }
+#reshero { height: 300px;
+           background-image: url(coast.jpg);
+           background-size: 200% 100%;
+           background-repeat: no-repeat; }
 /* Medium Display */
-@media (min-width: 600px)
-{ h1 { font-size: 2em;
+@media (min-width: 600px) {
+h1 { font-size: 2em;
      letter-spacing: 0.25em; }
 nav li { width: 12em;
 	    border-bottom: none; }
@@ -85,13 +94,17 @@ section { padding-left: 2em;
 #flow { display: flex;
         flex-direction: row; }
 #mobile { display: none; }
-#desktop {display: inline; }
-#homehero { background-size: 100% 100%;
-         /* background-image: url(coast.jpg) no-repeat; */ }
-#yurthero { background-size: 100% 100%;
-         /* background-image: url(yurt.jpg) no-repeat; */ }
-#trailhero { background-size: 100% 100%;
-          /* background-image: url(trail.jpg) no-repeat; */ } }
+#desktop { display: inline; }
+#homehero { background-size: 100% 100%; }
+#yurthero { background-size: 100% 100%; }
+#trailhero { background-size: 100% 100%; }
+form { display: grid; 
+       width: 60%;
+       grid-gap: 1em;
+       grid-template-columns: 10em 1fr; }
+input[type="submit"] { grid-column: 2 / 3;
+      width: 9em; }
+#reshero { background-size: 100% 100%; } }
 /* Large Display */
 @media (min-width: 1024px) 
 { body { background-image: linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%); }
