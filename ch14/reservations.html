@@ -5,6 +5,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="pacific.css" rel="stylesheet">
+<script>
+function validateForm() {
+if (document.forms[0].PhoneNumber.value == "" ) {
+    alert("Phone field cannot be empty.");
+    return false;
+} // end if
+if (document.forms[0].Nights.value > 14) {
+    alert("Nights are more than 14. You can't stay more than two weeks.");
+    return false;
+} // end if
+alert("Phone and Nights are valid.");
+return true;
+} // end function validateForm
+</script>
 </head>
 <body>
 <header>
@@ -26,7 +40,8 @@
  <h2>Reservations at Pacific Trails</h2>
  <h3>Contact Us</h3>
  <p>Required fields are marked with an asterisk*</p>
- <form method="post" action="https://webdevbasics.net/scripts/pacific.php">
+ <form method="post" action="https://webdevbasics.net/scripts/pacific.php" 
+ onsubmit="return validateForm();">
   <label for="FName">*F.Name:</label>
   <input type="text" name="FName" id="FName" required>
   <label for="LName">*L.Name:</label>
@@ -41,12 +56,12 @@
   <input type="text" name="ZIPCode" id="ZIPCode" minlength="5" maxlength="5" required>
   <label for="E-mail">*E-mail:</label>
   <input type="text" name="E-mail" id="E-mail" required>
-  <label for="Phone#">*Phone #:</label>
-  <input type="text" name="Phone#" id="Phone#" minlength="10" maxlength="10" required>
+  <label for="Phone#">*PhoneNumber:</label>
+  <input type="text" name="PhoneNumber" id="PhoneNumber" minlength="10" maxlength="10" required>
   <label for="ArrivalDate">Arrival Date</label>
   <input type="Date" name="ArrivalDate" id="ArrivalDate">
   <label for="Nights">Nights from 1 to 14:</label>
-  <input type="number" name="Nights" id="Nights" min="1" max="14">
+  <input type="number" name="Nights" id="Nights">
   <label for="Comments">Comments:</label>
   <textarea name="Comments" id="Comments" rows="2" cols="20"></textarea>
   <input type="submit" id="Submit" value="Submit">
