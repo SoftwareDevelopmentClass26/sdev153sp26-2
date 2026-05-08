@@ -1,0 +1,405 @@
+/* =========================
+GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+BODY
+========================= */
+
+body {
+
+    font-family: 'Orbitron', sans-serif;
+
+    background: #0f172a;
+
+    color: white;
+
+    line-height: 1.6;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 20px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.glass {
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.nav-flex {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+.logo {
+
+    font-size: 1.8rem;
+}
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 15px;
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+
+    display: inline-block;
+}
+
+nav a:hover,
+nav a.active {
+
+    background: white;
+
+    color: #111827;
+}
+
+/* =========================
+MOBILE MENU
+========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+}
+
+/* =========================
+HERO SECTION
+========================= */
+
+.hero {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #9333ea
+    );
+
+    padding: 40px 20px;
+}
+
+.hero-content h2 {
+
+    font-size: clamp(
+    2rem,
+    5vw,
+    4rem
+    );
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+
+    font-size: 1.1rem;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+/* =========================
+BUTTONS
+========================= */
+
+.btn {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: white;
+
+    color: #111827;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+
+    transform: scale(1.05);
+}
+
+/* =========================
+GRID LAYOUT
+========================= */
+
+.grid-3 {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,
+    minmax(250px,1fr));
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
+
+/* =========================
+CARDS
+========================= */
+
+.card {
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+
+    transform:
+    translateY(-5px);
+}
+
+/* =========================
+FORMS
+========================= */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    padding: 30px;
+
+    border-radius: 15px;
+}
+
+input,
+textarea {
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    width: 100%;
+}
+
+button {
+
+    background: #2563eb;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+
+    background: #1d4ed8;
+}
+
+/* =========================
+TABLES
+========================= */
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 30px;
+
+    overflow-x: auto;
+}
+
+th,
+td {
+
+    border: 1px solid white;
+
+    padding: 12px;
+
+    text-align: left;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+.hidden {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: all 0.8s ease;
+}
+
+.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+    nav {
+
+        width: 100%;
+
+        display: none;
+    }
+
+    nav.active {
+
+        display: block;
+    }
+
+    nav ul {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        margin-top: 15px;
+    }
+
+    .hero {
+
+        min-height: 60vh;
+    }
+
+    .hero-content h2 {
+
+        font-size: 2.2rem;
+    }
+
+    .container {
+
+        width: 95%;
+    }
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+    }
+}
