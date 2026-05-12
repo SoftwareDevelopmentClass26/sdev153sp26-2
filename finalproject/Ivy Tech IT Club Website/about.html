@@ -4,117 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About | IT Club - Ivy Tech South Bend-Elkhart</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>About | IT Club</title>
 
 <link rel="stylesheet" href="styles.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
-
-<style>
-
-body {
-    font-family: 'Orbitron', sans-serif;
-    background: #0f172a;
-    color: white;
-    margin: 0;
-}
-
-/* Navigation */
-
-.glass {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    padding: 15px 0;
-}
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-}
-
-.nav-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    padding: 0;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-nav a:hover,
-nav a.active {
-    background: white;
-    color: #111827;
-}
-
-/* About Section */
-
-.about-card {
-    background: rgba(255,255,255,0.08);
-    padding: 40px;
-    border-radius: 15px;
-    margin-top: 40px;
-    backdrop-filter: blur(10px);
-    animation: fadeIn 1s ease;
-}
-
-.about-card h2 {
-    color: #60a5fa;
-    margin-bottom: 20px;
-}
-
-.about-card ul {
-    line-height: 2;
-}
-
-.about-card li {
-    margin-bottom: 10px;
-}
-
-/* Animation */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-
-    .nav-flex {
-        flex-direction: column;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap"
+rel="stylesheet">
 
 </head>
 
@@ -126,15 +25,28 @@ nav a.active {
 
 <h1>About the IT Club</h1>
 
-<nav>
+<div class="menu-toggle"
+id="menu-toggle">☰</div>
+
+<nav id="nav-menu">
+
 <ul>
+
 <li><a href="index.html">Home</a></li>
-<li><a class="active" href="about.html">About</a></li>
+
+<li><a class="active"
+href="about.html">About</a></li>
+
 <li><a href="events.html">Events</a></li>
+
 <li><a href="members.html">Members</a></li>
+
 <li><a href="resources.html">Resources</a></li>
+
 <li><a href="contact.html">Contact</a></li>
+
 </ul>
+
 </nav>
 
 </div>
@@ -143,31 +55,125 @@ nav a.active {
 
 <main class="container">
 
-<section class="about-card">
+<section class="card">
 
 <h2>Who We Are</h2>
 
 <p>
-The Ivy Tech IT Club at Ivy Tech South Bend-Elkhart is a student organization focused on
-technological aspects, video game experiences, and developing social skills with others.
-Weekly meetings occur every Friday that include access to video games (consoles and PCs) and 
-Tech Labs where certain technological topics are discussed; guest speakers sometime stop by for these Tech Labs.
-Field trips are taken on occasion, whether it be to movie theaters, museums, or even events out-of-state.
+The IT Club at Ivy Tech South Bend-Elkhart is a student organization focused on
+technological aspects, video game experiences, and developing social skills with others. 
+We provide a welcoming environment for students to explore IT topics, collaborate on projects, and 
+build connections in the tech and gaming community. Our club is open to all students interested in technology 
+and gaming, regardless of their major or experience level.
 </p>
 
 <h2>What We Offer</h2>
 
-<ul>
-<li>Access to a variety of video games, whether it be consoles or PCs</li>
-<li>Tech Labs every Friday - sometimes with a guest speaker</li>
-<li>Occasional Field Trips</li>
-<li>Free Snacks and Drinks</li>
-<li>Opportunities to build friendships with and social skills with others</li>
-</ul>
+<div class="offer-grid">
+
+<!-- Video Games -->
+
+<div class="offer-card">
+
+<img
+src="data:image/jpeg;base64,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"
+alt="Students playing video games"
+class="offer-image">
+
+<h3>Video Games</h3>
+
+<p>
+Access to a variety of video games,
+whether it be consoles or PCs.
+</p>
+
+</div>
+
+<!-- Tech Labs -->
+
+<div class="offer-card">
+
+<img
+src="https://www.researchgate.net/publication/307525058/figure/fig1/AS:465495745929217@1487994242831/The-real-laboratory-setup-of-NetLab2.png"
+alt="Technology lab setup"
+class="offer-image">
+
+<h3>Tech Labs</h3>
+
+<p>
+Tech Labs on a Friday monthly —
+sometimes with a guest speaker.
+</p>
+
+</div>
+
+<!-- Field Trips -->
+
+<div class="offer-card">
+
+<img
+src="https://www.thoughtco.com/thmb/8mRwbVoRJkyE3xTh9yKw63oQJDU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-168359614-593c3d545f9b58d58afdfad9.jpg"
+alt="Students on a field trip"
+class="offer-image">
+
+<h3>Field Trips</h3>
+
+<p>
+Occasional field trips to fun and
+educational locations.
+</p>
+
+</div>
+
+<!-- Snacks -->
+
+<div class="offer-card">
+
+<img
+src="https://e3.365dm.com/19/03/2048x1152/skynews-junk-food-snacks_4611386.jpg"
+alt="Snacks and drinks"
+class="offer-image">
+
+<h3>Snacks & Drinks</h3>
+
+<p>
+Free snacks and drinks during
+club meetings and events.
+</p>
+
+</div>
+
+<!-- Friendships -->
+
+<div class="offer-card">
+
+<img
+src="https://cdn.prod.website-files.com/65b182e171d58a9764b4160d/66feb3e4d13f404ed9226f21_colleges-bottom.jpg"
+alt="Students socializing together"
+class="offer-image">
+
+<h3>Friendships</h3>
+
+<p>
+Opportunities to build friendships
+and social skills with others.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 </main>
+
+<footer>
+
+<p>
+&copy; 2026 Ivy Tech Community College South Bend-Elkhart; Images Courtesy of Google Images
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
